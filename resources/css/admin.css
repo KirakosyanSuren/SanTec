@@ -1,0 +1,342 @@
+@import 'tailwindcss';
+
+@import './admin/pages/login.css';
+@import './admin/pages/dashboard.css';
+
+@import 'admin/layouts/sidebar.css';
+@import 'admin/layouts/topbar.css';
+
+@import './admin/components/stat.css';
+@import './admin/components/table.css';
+@import './admin/components/image-upload.css';
+@import './components/select.css';
+@import './components/pagination.css';
+@import './components/input.css';
+@import './components/alert.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans',
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
+}
+
+:root {
+    --blue: #005baa;
+    --yellow: #ffd200;
+    --dark: #0f172a;
+    --border: #e2e8f0;
+    --glass-bg: rgba(255, 255, 255, .15);
+    --glass-border: rgba(255, 255, 255, .25);
+    --glass-shadow: 0 8px 32px rgba(15, 23, 42, .12);
+    --glass-blur: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: radial-gradient(
+        circle at top left,
+        rgba(0, 91, 170, .08),
+        transparent 40%
+    ),
+    radial-gradient(
+        circle at top right,
+        rgba(255, 210, 0, .08),
+        transparent 35%
+    ),
+    #f8fafc;
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 32px;
+    min-width: 0;
+    transition: .3s ease;
+}
+
+.admin-content.with-sidebar {
+    margin-left: 312px;
+}
+
+.admin-layout.sidebar-collapsed .admin-content {
+    margin-left: 122px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.h-50 {
+    height: 50px;
+}
+
+.h-60 {
+    height: 60px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, .08);
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.btn-primary {
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--yellow);
+    color: #000;
+    border: none;
+    border-radius: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(255, 210, 0, .25);
+    transition: transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 45px rgba(255, 210, 0, .45);
+}
+
+.btn-secondary {
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(20px);
+    cursor: pointer;
+    transition: transform .35s ease,
+    background .35s ease,
+    box-shadow .35s ease;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, .18);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, .12);
+}
+
+.page-header {
+    margin-bottom: 24px;
+}
+
+.page-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.page-description {
+    margin-top: 6px;
+    color: #64748b;
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.breadcrumbs a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.breadcrumbs span {
+    color: #64748b;
+}
+
+.form-card {
+    padding: 32px;
+    border-radius: 28px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-grid {
+    display: grid;
+    gap: 24px;
+    margin-bottom: 24px;
+    width: 50%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+    .admin-content {
+        margin-left: 0;
+        padding: 30px 24px 24px;
+    }
+
+    .admin-content.with-sidebar {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .form-card {
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+    .page-title {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .admin-content {
+        padding: 30px 20px 20px;
+    }
+
+
+    .form-grid {
+        width: 100%;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .w-50 {
+        width: 100%;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .admin-content {
+        padding: 30px 16px 16px;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .breadcrumbs {
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .form-card {
+        padding: 16px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .admin-content {
+        padding: 30px 12px 12px;
+    }
+
+    .breadcrumbs {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .form-card {
+        padding: 14px;
+    }
+}

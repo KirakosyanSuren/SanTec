@@ -1,0 +1,241 @@
+/* HERO */
+.hero {
+    padding: 40px 0;
+}
+
+.hero-banner {
+    position: relative;
+    height: 600px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(15, 23, 42, .15);
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.hero-banner:hover img {
+    transform: scale(1.05);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 15, 40, .88),
+        rgba(0, 15, 40, .45)
+    );
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    width: max-content;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, .15);
+    color: white;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-size: 120px;
+    line-height: 1;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 35px;
+    text-shadow: 0 15px 30px rgba(0, 0, 0, .25);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* SOCIALS */
+.hero-socials {
+    position: absolute;
+    left: 80px;
+    bottom: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+.hero-socials a {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, .15);
+    color: white;
+    font-size: 22px;
+    transition: transform .3s ease,
+    background .3s ease,
+    color .3s ease,
+    box-shadow .3s ease;
+}
+
+.hero-socials a:hover {
+    background: #ffd200;
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 210, 0, .35);
+}
+
+/* STATS */
+.stats {
+    padding: 60px 0 100px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 25px;
+}
+
+.stat-card {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    padding: 40px;
+    border-radius: 28px;
+    text-align: center;
+    border: 1px solid #edf2f7;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, .08);
+    transition: transform .4s ease,
+    box-shadow .4s ease,
+    border-color .4s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-12px);
+    border-color: rgba(0, 91, 170, .12);
+    box-shadow: 0 25px 60px rgba(0, 91, 170, .12);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, .55),
+        transparent
+    );
+    transition: .8s;
+}
+
+.stat-card:hover::before {
+    left: 100%;
+}
+
+.stat-card h2 {
+    color: #005baa;
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    color: #64748b;
+}
+
+/* SCROLL EFFECT */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .8s ease,
+    transform .8s ease;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .hero-banner {
+        height: 650px;
+    }
+
+    .hero-content {
+        padding: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 72px;
+    }
+
+    .stats-grid {
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .hero-banner {
+        height: 550px;
+    }
+
+    .hero-content {
+        padding: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-socials {
+        left: 30px;
+        bottom: 25px;
+    }
+
+    .stats-grid {
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-socials a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero-badge {
+        width: inherit;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+}

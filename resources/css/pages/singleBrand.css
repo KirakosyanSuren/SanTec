@@ -1,0 +1,204 @@
+.brand-hero {
+    padding: 120px 0 80px;
+}
+
+.brand-hero-content {
+    display: grid;
+    grid-template-columns: minmax(220px, 320px) 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.brand-logo {
+    background: white;
+    border-radius: 32px;
+    padding: 40px;
+    box-shadow: 0 15px 50px rgba(0,0,0,.08);
+}
+
+.brand-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.brand-badge {
+    display: inline-flex;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(0,91,170,.1);
+    color: #005baa;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.brand-info h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.brand-info p {
+    line-height: 1.8;
+    color: #666;
+    font-size: 18px;
+}
+
+.certificates-section {
+    padding: 80px 0 120px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    gap: 24px;
+}
+
+.certificate-card {
+    background: white;
+    border-radius: 28px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,.06);
+    transition: .3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-6px);
+}
+
+.certificate-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    background: rgba(255,210,0,.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate-icon i {
+    font-size: 34px;
+    color: #e53935;
+}
+
+.certificate-card h3 {
+    margin-bottom: 20px;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+    .brand-hero {
+        padding: 80px 0 60px;
+    }
+
+    .brand-hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .brand-logo {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .brand-info h1 {
+        font-size: 42px;
+    }
+
+    .certificates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .brand-hero {
+        padding: 60px 0 50px;
+    }
+
+    .brand-logo {
+        padding: 25px;
+        border-radius: 24px;
+    }
+
+    .brand-info h1 {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .brand-info p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .brand-badge {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    .section-header {
+        margin-bottom: 35px;
+    }
+
+    .section-header h2 {
+        font-size: 30px;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-card {
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width: 480px) {
+
+    .brand-hero {
+        padding: 40px 0;
+    }
+
+    .brand-logo {
+        max-width: 240px;
+        padding: 20px;
+    }
+
+    .brand-info h1 {
+        font-size: 28px;
+    }
+
+    .brand-info p {
+        font-size: 15px;
+    }
+
+    .certificate-icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .certificate-icon i {
+        font-size: 28px;
+    }
+
+    .certificate-card h3 {
+        font-size: 18px;
+    }
+
+}

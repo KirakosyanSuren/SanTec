@@ -1,0 +1,53 @@
+.desktop-nav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: .3s;
+}
+
+.desktop-nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 3px;
+    background: var(--yellow);
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.desktop-nav a:hover {
+    color: var(--blue);
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav .active::after {
+    width: 100%;
+}
+
+.desktop-nav .active {
+    color: var(--blue);
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: var(--dark);
+    padding: 18px 0;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.mobile-nav a:hover {
+    color: var(--blue);
+}
+
+.mobile-nav a.active {
+    color: var(--blue);
+    font-weight: 700;
+    border-left: 4px solid var(--yellow);
+    padding-left: 15px;
+}

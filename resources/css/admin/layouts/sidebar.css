@@ -1,0 +1,239 @@
+.admin-sidebar {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    width: 280px;
+    height: calc(100vh - 32px);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, .75);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: width .3s ease,
+    padding .3s ease,
+    transform .3s ease;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+.sidebar-close {
+    display: none;
+}
+
+/* =========================
+   LOGO
+========================= */
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.sidebar-logo img {
+    width: 150px;
+    height: 54px;
+    object-fit: contain;
+    transition: .3s ease;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.sidebar-link {
+    cursor: pointer;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: .25s ease;
+}
+
+.sidebar-link i,
+.sidebar-link svg {
+    width: 22px;
+    min-width: 22px;
+    font-size: 18px;
+}
+
+.sidebar-link:hover {
+    background: rgba(0, 91, 170, .06);
+    color: var(--blue);
+}
+
+.sidebar-link.active {
+    background: rgba(0, 91, 170, .1);
+    color: var(--blue);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.sidebar-footer {
+    margin-top: 16px;
+}
+
+.sidebar-footer button {
+    width: 100%;
+}
+
+.sidebar-footer button i {
+    font-size: 18px;
+}
+
+/* =========================
+   DESKTOP COLLAPSE
+========================= */
+.admin-layout.sidebar-collapsed .admin-sidebar {
+    width: 90px;
+    padding: 24px 12px;
+}
+
+.admin-layout.sidebar-collapsed .sidebar-logo img {
+    width: 52px;
+    height: 52px;
+}
+
+.admin-layout.sidebar-collapsed .sidebar-link span,
+.admin-layout.sidebar-collapsed .sidebar-footer span {
+    display: none;
+}
+
+.admin-layout.sidebar-collapsed .sidebar-link {
+    justify-content: center;
+    padding: 0;
+}
+
+.admin-layout.sidebar-collapsed .sidebar-link i,
+.admin-layout.sidebar-collapsed .sidebar-link svg {
+    margin: 0;
+}
+
+.admin-layout.sidebar-collapsed .sidebar-footer button {
+    justify-content: center;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, .45);
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s ease;
+    z-index: 999;
+}
+
+.sidebar-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================
+   TABLET & MOBILE
+========================= */
+@media (max-width: 1024px) {
+    .admin-sidebar {
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        border-radius: 0;
+        transform: translateX(-100%);
+    }
+
+    .admin-sidebar.show {
+        transform: translateX(0);
+    }
+
+    .sidebar-logo img {
+        width: 120px;
+        height: auto;
+    }
+
+    .sidebar-link span,
+    .sidebar-footer span {
+        display: block;
+    }
+
+    .sidebar-link {
+        justify-content: flex-start;
+        padding: 0 16px;
+    }
+
+    .admin-layout.sidebar-collapsed .admin-sidebar {
+        width: 280px;
+        padding: 24px;
+    }
+
+    .admin-layout.sidebar-collapsed .sidebar-link span,
+    .admin-layout.sidebar-collapsed .sidebar-footer span {
+        display: block;
+    }
+
+    .admin-layout.sidebar-collapsed .sidebar-link {
+        justify-content: flex-start;
+        padding: 0 16px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 500px) {
+    .admin-sidebar {
+        width: 100%;
+    }
+
+    .sidebar-close {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        width: 42px;
+        height: 42px;
+        border: none;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, .8);
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .25s ease;
+    }
+
+    .sidebar-close:hover {
+        background: var(--blue);
+        color: white;
+    }
+
+    .sidebar-logo {
+        padding-right: 48px;
+    }
+
+    .sidebar-footer {
+        margin-bottom: 28px;
+    }
+}

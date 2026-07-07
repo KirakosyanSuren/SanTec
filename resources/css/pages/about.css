@@ -1,0 +1,156 @@
+/* COMPANY */
+/* COMPANY */
+
+.company {
+    padding: 120px 0;
+}
+
+.company .container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.company-title {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 35px;
+}
+
+.company-image {
+    float: left;
+    width: 48%;
+    margin: 0 45px 25px 0;
+
+    overflow: hidden;
+    border-radius: 32px;
+    box-shadow: 0 20px 50px rgba(15,23,42,.08);
+}
+
+.company-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.company-image:hover img {
+    transform: scale(1.05);
+}
+
+.company-content {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: justify;
+    white-space: pre-line;
+}
+
+/* CTA */
+.about-cta {
+    padding: 0 0 120px;
+}
+
+.cta-box {
+    text-align: center;
+    padding: 80px;
+    border-radius: 40px;
+    background: linear-gradient(
+        135deg,
+        var(--blue),
+        #0d75d1
+    );
+    box-shadow: 0 30px 80px rgba(0, 91, 170, .25);
+}
+
+.cta-box h2 {
+    color: white;
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.cta-box p {
+    color: rgba(255, 255, 255, .9);
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .about-content {
+        padding: 50px;
+    }
+
+    .about-content h1 {
+        font-size: 62px;
+    }
+
+    .company-grid {
+        grid-template-columns:1fr;
+    }
+
+    .advantages-grid {
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .company-content h2 {
+        font-size: 42px;
+    }
+
+    .section-header h2 {
+        font-size: 46px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .about-hero-banner {
+        height: 560px;
+        border-radius: 28px;
+    }
+
+    .about-content {
+        padding: 30px;
+    }
+
+    .about-content h1 {
+        font-size: 46px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    .company {
+        padding: 80px 0;
+    }
+
+    .advantages {
+        padding: 80px 0;
+    }
+
+    .advantages-grid {
+        grid-template-columns:1fr;
+    }
+
+    .advantage-card {
+        padding: 30px;
+    }
+
+    .advantage-card h3 {
+        font-size: 52px;
+    }
+
+    .cta-box {
+        padding: 50px 25px;
+        border-radius: 28px;
+    }
+
+    .cta-box h2 {
+        font-size: 38px;
+    }
+}
