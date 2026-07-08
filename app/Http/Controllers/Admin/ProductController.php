@@ -26,7 +26,7 @@ class ProductController extends Controller
     {
         $products = $this->productService->getAll($request->all());
         $brands = $this->brandService->getActiveForSelect();
-        $categories = $this->categoryService->getActive();
+        $categories = $this->categoryService->getActive($request->brand_id);
 
         return view('admin.products.index', compact(
             'products',

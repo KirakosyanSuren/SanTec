@@ -10,7 +10,7 @@ interface CategoryRepositoryInterface
 {
     public function getALl(): LengthAwarePaginator;
 
-    public function getActive(): Collection;
+    public function getActive(?int $brand_id = null): Collection;
 
     public function store(array $data): void;
 

@@ -18,9 +18,9 @@ class CategoryService
         return $this->categoryRepository->getAll();
     }
 
-    public function getActive(): Collection
+    public function getActive(?int $brand_id = null): Collection
     {
-        return $this->categoryRepository->getActive();
+        return $this->categoryRepository->getActive($brand_id);
     }
 
     public function store(array $data): void

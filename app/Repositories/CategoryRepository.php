@@ -19,9 +19,14 @@ class CategoryRepository implements CategoryRepositoryInterface
             ->paginate(12);
     }
 
-    public function getActive(): Collection
+    public function getActive(?int $brand_id = null): Collection
     {
         return Category::where('is_active', 1)
+            ->when($brand_id, function ($query) use ($brand_id) {
+                $query->whereHas('brands', function ($q) use ($brand_id) {
+                    $q->where('brands.id', $brand_id);
+                });
+            })
             ->latest()
             ->get();
     }

@@ -4,31 +4,6 @@
         :create-text="__('admin.common.create')"
         create-url="admin.models.create"
     >
-
-{{--        <x-slot:search>--}}
-{{--            <form id="filterForm" class="table-search" action="{{ route('admin.products.index') }}" method="GET">--}}
-{{--                <div class="form-grid">--}}
-
-{{--                    <x-ui.select--}}
-{{--                        id="brand-select"--}}
-{{--                        :label="__('admin.product.brand')"--}}
-{{--                        name="brand_id"--}}
-{{--                        :options="$brands"--}}
-{{--                        :multiple="false"--}}
-{{--                        :selected="request('brand_id')"--}}
-{{--                        :showAllOption="true"--}}
-{{--                    />--}}
-
-{{--                    <div class="form-group">--}}
-{{--                        <button class="btn btn-primary h-50">--}}
-{{--                            {{ __('admin.common.filter') }}--}}
-{{--                        </button>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </form>--}}
-{{--        </x-slot:search>--}}
-
-
         <table class="admin-table">
             <thead>
             <tr>
