@@ -5,7 +5,6 @@
     z-index: 1000;
     background: rgba(255, 255, 255, .75);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, .2);
     box-shadow: 0 8px 32px rgba(0, 91, 170, .08);
 }

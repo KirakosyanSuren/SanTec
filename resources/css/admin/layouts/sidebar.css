@@ -10,7 +10,6 @@
     border-radius: 28px;
     background: rgba(255, 255, 255, .75);
     backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
     z-index: 1000;
