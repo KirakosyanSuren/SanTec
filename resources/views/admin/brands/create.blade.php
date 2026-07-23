@@ -23,6 +23,24 @@
 
     <div class="form-card">
 
+        @if ($errors->any())
+            <div style="background:#fee2e2;border:1px solid #ef4444;padding:20px;margin-bottom:20px;border-radius:10px">
+                <h3>Validation Errors</h3>
+
+                <pre>{{ print_r($errors->toArray(), true) }}</pre>
+
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @else
+            <div style="background:#dcfce7;border:1px solid #22c55e;padding:20px;margin-bottom:20px;border-radius:10px">
+                Validation errors not found.
+            </div>
+        @endif
+
         <form
             action="{{ route('admin.brands.store') }}"
             method="POST"
