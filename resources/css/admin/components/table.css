@@ -91,6 +91,10 @@
     color: var(--dark);
     border-top: 1px solid rgba(255, 255, 255, .15);
     vertical-align: middle;
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* BADGES */

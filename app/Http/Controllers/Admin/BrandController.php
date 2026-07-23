@@ -8,8 +8,6 @@ use App\Http\Requests\Brand\UpdateRequest;
 use App\Models\Brand;
 use App\Services\BrandService;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
 class BrandController extends Controller
