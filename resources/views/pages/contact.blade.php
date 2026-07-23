@@ -78,7 +78,7 @@
                         @csrf
 
                         <x-ui.input
-                            :label="__('content.name')"
+                            :label="__('content.contact_fullname')"
                             name="name"
                             :placeholder="__('content.contact_fullname')"
                         />

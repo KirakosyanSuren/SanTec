@@ -62,7 +62,7 @@
         </a>
 
         <a href="{{ route('admin.contact.index') }}"
-           class="sidebar-link {{ request()->routeIs('admin.contact-us.*') ? 'active' : '' }}">
+           class="sidebar-link {{ request()->routeIs('admin.contact.*') ? 'active' : '' }}">
             <i class="fa-solid fa-address-card"></i>
             <span>{{ __('admin.navbar.contact_data') }}</span>
         </a>
