@@ -1,32 +1,55 @@
 <x-app :title="__('navbar.brands')">
 
-    <section class="brand-hero">
+{{--    <section class="brand-hero">--}}
+{{--        <div class="container">--}}
+
+{{--            <div class="brand-hero-content">--}}
+
+{{--                <div class="brand-logo">--}}
+{{--                    <img--}}
+{{--                        src="{{ Storage::url($brand->image->path) }}"--}}
+{{--                        alt="{{ $brand->name }}"--}}
+{{--                    >--}}
+{{--                </div>--}}
+
+{{--                <div class="brand-info">--}}
+
+{{--                    <h1>--}}
+{{--                        {{ $brand->name }}--}}
+{{--                    </h1>--}}
+
+{{--                    <p>--}}
+{{--                        {{ $brand->description[app()->getLocale()] }}--}}
+{{--                    </p>--}}
+
+{{--                </div>--}}
+
+{{--            </div>--}}
+
+{{--        </div>--}}
+{{--    </section>--}}
+
+    <section class="company">
+
         <div class="container">
 
-            <div class="brand-hero-content">
+            <h2 class="company-title">
+                {{ $brand->name }}
+            </h2>
 
-                <div class="brand-logo">
-                    <img
-                        src="{{ Storage::url($brand->image->path) }}"
-                        alt="{{ $brand->name }}"
-                    >
-                </div>
+            <div class="company-image">
+                <img
+                    src="{{ Storage::url($brand->image->path) }}"
+                    alt="{{ $brand->name }}"
+                >
+            </div>
 
-                <div class="brand-info">
-
-                    <h1>
-                        {{ $brand->name }}
-                    </h1>
-
-                    <p>
-                        {{ $brand->description[app()->getLocale()] }}
-                    </p>
-
-                </div>
-
+            <div class="company-content">
+                {!! nl2br(e($brand->description[app()->getLocale()])) !!}
             </div>
 
         </div>
+
     </section>
 
     @if($brand->certificates->count())
