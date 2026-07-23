@@ -70,7 +70,7 @@
                         <div class="product-block">
 
                             <a
-                                href="{{ asset('storage/'.$product->passport->path) }}"
+                                href="{{ Storage::url($product->passport->path) }}"
                                 target="_blank"
                                 class="download-passport">
 
