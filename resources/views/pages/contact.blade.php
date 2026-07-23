@@ -80,7 +80,7 @@
                         <x-ui.input
                             :label="__('content.name')"
                             name="name"
-                            :placeholder="__('content.name')"
+                            :placeholder="__('content.contact_fullname')"
                         />
 
                         <x-ui.input

@@ -45,4 +45,7 @@ return [
 
     'choose_model' => 'Ընտրեք մոդելը',
     'download_passport' => 'Ներբեռնել անձնագիրը',
+
+    'contact_fullname' => 'Անուն, ազգանուն'
+
 ];

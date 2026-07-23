@@ -46,4 +46,6 @@ return [
     'choose_model' => 'Choose Model',
     'download_passport' => 'Download Passport',
 
+    'contact_fullname' => 'Full name'
+
 ];

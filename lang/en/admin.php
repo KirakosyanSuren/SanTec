@@ -106,7 +106,7 @@ return [
     ],
 
     'feedback' => [
-        'name' => 'Name',
+        'name' => 'Full name',
         'email' => 'Email',
         'message' => 'Message',
     ],

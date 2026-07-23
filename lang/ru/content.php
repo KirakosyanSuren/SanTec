@@ -45,4 +45,5 @@ return [
     'choose_model' => 'Выберите модель',
     'download_passport' => 'Скачать паспорт',
 
+    'contact_fullname' => 'Полное имя'
 ];

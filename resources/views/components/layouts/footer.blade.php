@@ -87,7 +87,7 @@
             <div class="footer-bottom">
 
                 <p>
-                    © {{ date('Y') }} Santech.
+                    © {{ date('Y') }} SanTech.
                     {{ __('footer.copyright') }}
                 </p>
 
